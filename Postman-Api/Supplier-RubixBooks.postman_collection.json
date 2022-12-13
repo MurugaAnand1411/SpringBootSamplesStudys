@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "b627145d-a4eb-4ee3-b698-f616572b38f6",
+		"name": "Supplier-RubixBooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Supplier_1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"YESSARTECH\",\r\n    \"address1\": \"NO:17/3 Ist FLOOR\",\r\n    \"address2\": \"DD COMPLEX PUTHUR HIGH ROAD,OPP ARUNA THETER PUTHUR\",\r\n    \"city\": \"Trichy\",\r\n    \"district\":\"Trichy\",\r\n    \"state\": \"TamilNadu\",\r\n    \"country\": \"India\",\r\n    \"taxIdentifier\": \"33BOJPR4434M1ZJ\",\r\n    \"zipcode\": 620018,\r\n    \"email\": \"yessartech@gmail.com\",\r\n    \"phone\": 9380742625\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/supplier/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supplier_2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"AAA SYSTEMS & PERIPHERALS\",\r\n    \"address1\": \"C-74, UMA ILLAM 1ST FLOOR, 11TH CROSS EAST\",\r\n    \"address2\": \"NEAR MERCY HOSPITAL, THILLAI NAGAR\",\r\n    \"city\": \"Trichy\",\r\n    \"district\":\"Trichy\",\r\n    \"state\": \"TamilNadu\",\r\n    \"country\": \"India\",\r\n    \"taxIdentifier\": \"33CJKPM8210M1ZY\",\r\n    \"zipcode\": 620018,\r\n    \"email\": \"yessartech@gmail.com\",\r\n    \"phone\": 9842444199\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/supplier/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listOfSupplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/supplier/viewAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"viewAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBySuppilerId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\"name\":\"kavin\",\"address1\":\"varagur\",\"address2\":\"varagur\",\"city\":\"namakkal\",\"state\":\"tamilNadu\",\"Country\":\"india\",\"taxIdentifier\":\"1234678901\",\"active\":true\r\n},\r\n{\r\n\"name\":\"Muruga\",\"address1\":\"trichy\",\"address2\":\"trichy\",\"city\":\"trichy\",\"state\":\"tamilNadu\",\"Country\":\"india\",\"taxIdentifier\":\"1234678901\",\"active\":true\r\n},\r\n{\r\n    \"name\":\"ajith\",\"address1\":\"musiri\",\"address2\":\"musiri\",\"city\":\"trichy\",\"state\":\"tamilNadu\",\"Country\":\"india\",\"taxIdentifier\":\"1234678901\",\"active\":true\r\n    },\r\n    {\"name\":\"arivu\",\"address1\":\"trichy\",\"address2\":\"trichy\",\"city\":\"trichy\",\"state\":\"tamilNadu\",\"Country\":\"india\",\"taxIdentifier\":\"1234678901\",\"active\":true}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/supplier/view/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"view",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSupplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"YESSARTECHNOLOGIES\",\r\n    \"address1\": \"NO:17/3 Ist FLOOR\",\r\n    \"address2\": \"DD COMPLEX PUTHUR HIGH ROAD,OPP ARUNA THETER PUTHUR\",\r\n    \"city\": \"Trichy\",\r\n    \"district\":\"Trichy\",\r\n    \"state\": \"TamilNadu\",\r\n    \"country\": \"India\",\r\n    \"taxIdentifier\": \"33BOJPR4434M1ZJ\",\r\n    \"zipcode\": 620018,\r\n    \"email\": \"yessartech@gmail.com\",\r\n    \"phone\": 9380742625\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/supplier/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/supplier/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

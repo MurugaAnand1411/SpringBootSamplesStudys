@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "c8bdfe09-486d-45a3-9048-28420fcf0f48",
+		"name": "Receipt-rubixBooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice\": {\r\n        \"id\": 1,\r\n        \"client\": {\r\n            \"id\": 1,\r\n            \"invoiceItems\": [\r\n                {\r\n                    \"id\": 1\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"amount\": 150000.0,\r\n    \"date\": \"2022-09-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/view/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"view",
+						"1"
+					],
+					"query": [
+						{
+							"key": "invoice_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "paidDate",
+							"value": "2022-09-23",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "200",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/viewAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"viewAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice\": {\r\n        \"id\": 1,\r\n        \"client\": {\r\n            \"id\": 1,\r\n            \"invoiceItems\": [\r\n                {\r\n                    \"id\": 1\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"amount\": 250000.0,\r\n    \"date\": \"2022-09-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/delete/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

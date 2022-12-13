@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "2820691e-9d32-43ae-ae09-80b65a7c9c93",
+		"name": "Bill-Rubix_book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createBill",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"billNo\": 1,\r\n    \"billDate\": \"2021-10-06T18:30:00.000+00:00\",\r\n    \"amount\": 1500.0,\r\n    \"payByDate\": \"2021-10-07T18:30:00.000+00:00\",\r\n    \"creditDays\": 15,\r\n    \"supplier\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/creteBill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"creteBill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBills",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/getAllBills",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"getAllBills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBillById/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/getBillById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"getBillById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBill/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"billNo\": 7,\r\n    \"billDate\": \"2021-10-06T18:30:00.000+00:00\",\r\n    \"amount\": 300.0,\r\n    \"payByDate\": \"2021-10-07T18:30:00.000+00:00\",\r\n    \"creditDays\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/updateBill/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"updateBill",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "billItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bill\": {\r\n        \"id\": 1\r\n    },\r\n    \"description\": \"pen\",\r\n    \"item\": \"pen\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/crateBillItem/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"crateBillItem",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_billItem",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"mouse\",\r\n    \"item\": \"mouse\",\r\n    \"lineTotal\": 200,\r\n    \"quantity\": 1,\r\n    \"serialNo\": 15,\r\n    \"unitPrice\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/updateBillItem/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"updateBillItem",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBillItems",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/getAllBillItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"getAllBillItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBillItemsById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/getBillItemById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"getBillItemById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBillItems",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"bill\": {\r\n            \"id\": 1\r\n        },\r\n        \"description\": \"pencil\",\r\n        \"item\": \"pen\",\r\n        \"lineTotal\": 25,\r\n        \"quantity\": 5,\r\n        \"serialNo\": 100,\r\n        \"unitPrice\": 5\r\n    },\r\n    {\r\n        \"bill\": {\r\n            \"id\": 1\r\n        },\r\n        \"description\": \"notepad\",\r\n        \"item\": \"notepad\",\r\n        \"lineTotal\": 25,\r\n        \"quantity\": 5,\r\n        \"serialNo\": 100,\r\n        \"unitPrice\": 5\r\n    },\r\n    {\r\n        \"bill\": {\r\n            \"id\": 1\r\n        },\r\n        \"description\": \"papers\",\r\n        \"item\": \"papers\",\r\n        \"lineTotal\": 25,\r\n        \"quantity\": 5,\r\n        \"serialNo\": 100,\r\n        \"unitPrice\": 5\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/createBillItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"createBillItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bill/delete/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"pencil\",\r\n    \"item\": \"pen\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"notepad\",\r\n    \"item\": \"notepad\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"papers\",\r\n    \"item\": \"papers\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n}\r\n]\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/delete/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBillItem/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"pencil\",\r\n    \"item\": \"pen\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"notepad\",\r\n    \"item\": \"notepad\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"papers\",\r\n    \"item\": \"papers\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n}\r\n]\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill/deleteBillItem/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill",
+						"deleteBillItem",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

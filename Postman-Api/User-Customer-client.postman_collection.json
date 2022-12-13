@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "7cb8cdf1-28c4-4088-a2d6-55500d3f17a2",
+		"name": "User-Customer-Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rubix Technologies Pvt Ltd\",\r\n    \"address1\": \"Thillainagar\",\r\n    \"address2\": \"7Th cross\",\r\n    \"city\": \"Trichy\",\r\n    \"state\": \"Tamilnadu\",\r\n    \"country\": \"India\",\r\n    \"taxIdentifier\": \"33BOJPR4434M1ZJ\" ,\r\n    \"active\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/CreateCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"CreateCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCustomer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/GetAllCustomers/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"GetAllCustomers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customer/GetCustomer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"GetCustomer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rubix Technologies Pvt. Ltd.\",\r\n    \"address1\": \"Thillainagar\",\r\n    \"address2\": \"7Th cross\",\r\n    \"city\": \"Trichy\",\r\n    \"state\": \"Tamilnadu\",\r\n    \"country\": \"India\",\r\n    \"taxIdentifier\": \"33BOJPR4434M1ZJ\" ,\r\n    \"active\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/UpdateCustomer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"UpdateCustomer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/DeleteCustomer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"DeleteCustomer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Dinesh\",\r\n    \"lastName\": \"N\",\r\n    \"email\": \"Dinesh@gmail\",\r\n    \"password\": \"Dinesh\",\r\n    \"active\": \"true\",\r\n    \"customer\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/User/CreateUser/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"User",
+						"CreateUser",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Basker\",\r\n    \"lastName\": \"R\",\r\n    \"email\": \"basker@gmail\",\r\n    \"password\": \"Basker\",\r\n    \"active\": \"true\",\r\n    \"customer\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/User/UpdateUser/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"User",
+						"UpdateUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetALLUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/User/GetAllUsers/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"User",
+						"GetAllUsers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/User/GetUser/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"User",
+						"GetUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/User/DeleteUser/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"User",
+						"DeleteUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"Glamz\",\r\n    \"address1\": \"Itally\",\r\n    \"address2\": \"Itally\",\r\n    \"city\": \"Itally\",\r\n    \"state\": \"Itally\",\r\n    \"country\":\"Itally\",\r\n    \"taxIdentifier\":\"33BOJPR4434M1Zd\",\r\n    \"active\":\"true\"\r\n       }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Client/CreateClient",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Client",
+						"CreateClient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllClients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Client/GetAllClient/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Client",
+						"GetAllClient",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetClientByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Client/GetClient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Client",
+						"GetClient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateClient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Glamz Project\",\r\n    \"address1\": \"Itally\",\r\n    \"address2\": \"Itally\",\r\n    \"city\": \"Itally\",\r\n    \"state\": \"Itally\",\r\n    \"country\": \"Itally\",\r\n    \"taxIdentifier\": \"33BOJPR4434M1Zd\",\r\n    \"active\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Client/UpdateClient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Client",
+						"UpdateClient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteClient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/Client/DeleteClient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Client",
+						"DeleteClient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

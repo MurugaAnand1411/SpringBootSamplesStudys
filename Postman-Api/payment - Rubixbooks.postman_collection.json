@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "c2840f09-5dc0-4cd5-87cc-c56a05b2da9b",
+		"name": "Payment - Rubixbooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addPayment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1500.00,\r\n    \"bill\": {\r\n        \"id\": 1,\r\n        \"supplier\": {\r\n            \"id\": 1\r\n        },\r\n        \"billItems\": [\r\n            {\r\n                \"id\": 1\r\n            }\r\n        ]\r\n    },\r\n    \"date\": \"2021-07-06T18:30:00.000+00:00\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/payment/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addListOfPayments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \r\n        \"amount\": 2.0,\r\n        \"bill\": {\r\n            \"id\": 1,\r\n            \"supplier\": {\r\n                \"id\": 1\r\n            },\r\n            \"billItems\": [\r\n                {\r\n                    \"id\": 1\r\n                }\r\n            ]\r\n        },\r\n        \"date\": \"2021-07-06T18:30:00.000+00:00\"\r\n    },\r\n    {\r\n        \r\n        \"amount\": 233.0,\r\n        \"bill\": {\r\n            \"id\": 2,\r\n            \"supplier\": {\r\n                \"id\": 1\r\n            },\r\n            \"billItems\": [\r\n                {\r\n                    \"id\": 2\r\n                }\r\n            ]\r\n        },\r\n        \"date\": \"2021-07-06T18:30:00.000+00:00\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/payment/creates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment",
+						"creates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAll",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/payment/viewAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment",
+						"viewAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/payment/view/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment",
+						"view",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePayment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2021-07-06T18:30:00.000+00:00\",\r\n    \"amount\": 1332.0,\r\n    \"bill\": {\r\n        \"supplier\": {\r\n            \"id\":1\r\n        },\r\n        \"billItems\": [\r\n            {\r\n                \"id\" : 1\r\n            }\r\n        ]\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/payment/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete payment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"date\": \"2021-07-06T18:30:00.000+00:00\",\r\n        \"amount\": 200.0,\r\n        \"bill\": {\r\n            \"billNo\": 6,\r\n            \"billDate\": \"2021-07-06T18:30:00.000+00:00\",\r\n            \"amount\": 200.0,\r\n            \"payByDate\": \"2021-07-06T18:30:00.000+00:00\",\r\n            \"creditDays\": 10,\r\n            \"supplier\": {\r\n                \"name\": \"coffe\",\r\n                \"address1\": \"trichy\",\r\n                \"address2\": \"thillainagar\",\r\n                \"city\": \"trichy\",\r\n                \"district\": \"trichy\",\r\n                \"state\": \"tamilnadu\",\r\n                \"country\": \"india\",\r\n                \"zipcode\": \"620018\",\r\n                \"taxIndentifier\": \"98\",\r\n                \"phone\": \"7878787878\"\r\n            },\r\n            \"billItems\": []\r\n        }\r\n    }\r\n    "
+				},
+				"url": {
+					"raw": "http://localhost:8080/payment/delete/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment",
+						"delete",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

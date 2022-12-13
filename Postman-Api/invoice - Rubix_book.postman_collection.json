@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "a77fc9a9-9571-42fa-be6f-bb19fa615a7a",
+		"name": "Invoice - Rubix_book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createInvoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"client\": {\r\n            \"id\": 1\r\n        },\r\n        \"invoiceNumber\": \"1\",\r\n        \"amount\": 10000.00,\r\n        \"payByDate\": \"2021-10-05T18:30:00.000+00:00\",\r\n        \"creditDays\": 10,\r\n        \"invoiceItems\": [],\r\n        \"date\": \"2021-10-05T18:30:00.000+00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/creteInvoice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"creteInvoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllInvoice",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/getAllInvoices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"getAllInvoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInvoiceById/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/getInvoiceById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"getInvoiceById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateInvoice/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"client\": {\r\n            \"id\": 1\r\n        },\r\n        \"invoiceNumber\": \"1\",\r\n        \"amount\": 15000.00,\r\n        \"payByDate\": \"2021-10-05T18:30:00.000+00:00\",\r\n        \"creditDays\": 10,\r\n        \"invoiceItems\": [],\r\n        \"date\": \"2021-10-05T18:30:00.000+00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/updateInvoice/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"updateInvoice",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoice/delete/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"pencil\",\r\n    \"item\": \"pen\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"notepad\",\r\n    \"item\": \"notepad\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"papers\",\r\n    \"item\": \"papers\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n}\r\n]\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoiceItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice\":{\r\n        \"id\":1\r\n    },\r\n    \"serialNo\": 1,\r\n    \"item\": \"Pay\",\r\n    \"description\": \"Monthly Pay\",\r\n    \"unitPrice\": 1500.0,\r\n    \"quantity\": 10,\r\n    \"lineTotal\": 15000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/crateInvoiceItem/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"crateInvoiceItem",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInvoiceItemById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/getInvoiceItemById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"getInvoiceItemById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllInvoiceItems",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/getAllInvoiceItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"getAllInvoiceItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createInvoiceItems",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"invoice\":{\r\n        \"id\":1\r\n    },\r\n    \"serialNo\": 2,\r\n    \"item\": \"Pay\",\r\n    \"description\": \"Monthly Pay\",\r\n    \"unitPrice\": 1500.0,\r\n    \"quantity\": 10,\r\n    \"lineTotal\": 15000.00\r\n},\r\n{\r\n    \"invoice\":{\r\n        \"id\":1\r\n    },\r\n    \"serialNo\": 3,\r\n    \"item\": \"Pay\",\r\n    \"description\": \"Monthly Pay\",\r\n    \"unitPrice\": 1500.0,\r\n    \"quantity\": 10,\r\n    \"lineTotal\": 15000.00\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/createInvoiceItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"createInvoiceItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_InvoiceItem",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice\":{\r\n        \"id\":1\r\n    },\r\n    \"serialNo\": 1,\r\n    \"item\": \"Pay\",\r\n    \"description\": \"Monthly Pay\",\r\n    \"unitPrice\": 15000.0,\r\n    \"quantity\": 10,\r\n    \"lineTotal\": 150000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/updateInvoiceItem/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"updateInvoiceItem",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteInvoiceItem/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"pencil\",\r\n    \"item\": \"pen\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"notepad\",\r\n    \"item\": \"notepad\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n},{\r\n    \"bill\":{ \r\n     \"id\"  : 1},\r\n    \"description\":\"papers\",\r\n    \"item\": \"papers\",\r\n    \"lineTotal\": 25,\r\n    \"quantity\": 5,\r\n    \"serialNo\": 100,\r\n    \"unitPrice\": 5\r\n}\r\n]\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/invoice/deleteInvoiceItem/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoice",
+						"deleteInvoiceItem",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
