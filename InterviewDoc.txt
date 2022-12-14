@@ -1,0 +1,165 @@
+experience
+npm
+react app command
+ts and js
+component  class and function component
+react render
+dom vs virtual dom
+use call back
+memo
+reactProps
+ReactHooks
+promiss and async wait
+webpack and bable
+stateless component
+functional component features 
+
+
+Difference Bw put and patch
+
+
+
+CSS
+inline CSS
+position
+sass and las
+
+
+JS
+string duplicate program
+Aarrow function
+Callbyvalue
+CallByReferenece
+browser compatiablity issue
+
+
+
+
+
+
+
+
+
+Despatch servers
+abstrction
+singletone
+@component
+praivate class
+final class
+create ,select and udate qury
+controller link put and get method
+
+info
+_______
+Actuators
+ioc
+spring advandage 
+spring and spring boot
+repository
+ORM
+@parm @request path
+component vs BEAN
+
+
+
+JAVA:
+Design Parttern:
+Bubblesort:
+REST API
+Public Static Void Main
+marker interface
+sync
+hash map and hash table
+
+
+tcs JAVA:
+1.why we using public static void main(Strring[] args){
+}
+2. abtraction
+3.threading how can we achive java
+(thred[inheritance] and runable thread [interface]) 
+4.java 8 featchers
+stream api
+map filter
+flat map
+5 what is the diff arrylist and vector
+6.custom exception 
+7. Duplicate chart in a string 
+8. why need Itrator in collection
+9.garbag collection Finalize();
+10. exception handling with multiple catch in one try
+
+
+
+
+elam Java :
+____________
+1   .equals and == diff
+2.   how to compare 2 objects
+3.   what is arrayList vs LinkedList
+4.   how to get duplicate element with itrating(streams)
+5.   how to diffrenectiate  bean cleass 
+6.   sync with example
+
+github co-pilate
+tab mine
+block box
+
+
+
+mani java:
+_____________
+1. stream api
+filrter action  movies -1,2,3,5,6
+{123},{456}-map
+{{}{}{}{}{}{}{}}
+map vs flatMap
+2. pradicate in java
+3. String builder vs Stringbuffer
+4. synchronize Block vs synchronize method
+5. Lifecycle of thred
+6. DeadLock in java
+7. hashMap vs HashSet
+
+
+INFOSYS
+*******
+comparable& comparator
+how to sort in collection
+Spring Advantages
+@rest controller and normarl controller
+java 8 feachers 
+spring profile
+@jason object conevertor
+how to add dependency
+multithreading
+ 
+
+
+
+employee resource
+* Design
+* What all u support
+* explain with a Class 
+
+
+
+
+
+
+
+
+
+(key,values)-only allow one null key
+key doesnot allow duplicate
+
+
+1. Check if a string contains an anagram of another string as its substring 
+
+
+
+2. Implement a stack data structure using Queue data 
+
+
+Spring boot Roll using spring secuity
+https://github.com/SudhaSanthakumar/RoleBasedAuthorization
